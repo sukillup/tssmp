@@ -1,0 +1,61 @@
+{% extends 'idff.html' %}
+{% block style %}
+<style>
+    #ri{
+        text-align: center; 
+        font-size: 50px;
+    }
+    #r{
+        width: 30px;
+        height: 30px; 
+    }
+    #c{
+        width: 30px;
+        height: 30px; 
+    }
+    #d{
+        width: 30px;
+        height: 30px; 
+    }
+    #m1{
+        width: 50px; 
+        height: 30px;
+    }
+    #m2{
+        width: 90px;
+        height: 30px;
+    }
+</style>
+{% endblock  %}
+{% block content %}
+<form method="POST" action="./ddda" enctype="multipart/form-data">
+    <div id="ri">
+    <label>サイズ</label><br>
+    <input type="radio" id="r" value="F" name="サイズ" >F<br><br>
+    </div>
+    <div  id="ri">
+    <label>カラー</label><br>
+    <input type="radio" id="c" value="ブラック" name="カラー" >ブラック<br>
+    <input type="radio" id="c" value="オフホワイト" name="カラー" >オフホワイト<br>
+    <input type="radio" id="c" value="ライトグレー" name="カラー" >ライトグレー<br>
+    <input type="radio" id="c" value="ナチュラル" name="カラー" >ナチュラル<br><br>
+    </div>
+    <div id="ri">
+    <label>デザインの自前か依頼</label><br>
+    <input type="radio" id="d" value="自前" name="デザイン" >自前<br>
+    <input type="radio" id="d" value="依頼" name="デザイン" >依頼<br><br>
+    </div>
+    <div id="ri">
+    <label>デザイン位置</label><br>
+    <input type="radio" id="d" value="ワンポイント" name="デザイン位置" >ワンポイント<br>
+    <input type="radio" id="d" value="全体" name="デザイン位置" >全体<br>
+    <input type="radio" id="d" value="２か所以上" name="デザイン位置" >２か所以上<br><br>
+    </div>
+    <div id="ri">
+    <label>枚数</label><br>
+    <input type="number" name="q" max="100" min="1" value="1" step="1"><br><br>
+    <input type="submit" id="m1" value="確定" >
+    <input type="reset" id="m2" value="リセット">
+    </div>
+</form>
+{% endblock  %}
